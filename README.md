@@ -3,6 +3,7 @@ This is a file which can be exposed as a library that supports the basic CRD(cre
 
 The data store will support the following :
 
+
 1.It can be initialized using an optional file path. If one is not provided, it will reliably create itself in a reasonable location on the laptop.
 
 2.A new key-value pair can be added to the data store using the Create operation. The key is always a string - capped at 32chars. The value is always a JSON object - capped at 16KB.
@@ -20,5 +21,6 @@ The data store will support the following :
 8.The file size never exceeds 1GB
 
 9.The file is accessed by multi-threading
+
 
 Go through the code.py file and output.pdf file that are attached here with in order to understand clearly how the code works and how to perform operations in this.

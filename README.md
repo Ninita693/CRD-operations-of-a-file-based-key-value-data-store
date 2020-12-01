@@ -23,4 +23,4 @@ The data store will support the following :
 9.The file is accessed by multi-threading
 
 
-Go through the code.py file and output.pdf file that are attached here with in order to understand clearly how the code works and how to perform operations in this.
+

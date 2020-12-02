@@ -1,3 +1,11 @@
+import libraries
+import create
+import read
+import delete
+
+
+d={} #'d' is the dictionary in which we store data in key-value format
+
 create("ninni21@gmail.com","Nini",998797833) ##to create a key with key_name,name,phno given and with no time-to-live property
 
 read("ninni21@gmail.com") #it returns the Name and phno of the respective key in Jasonobject format 'key_name:name,phno'

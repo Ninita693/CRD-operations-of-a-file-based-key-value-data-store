@@ -1,7 +1,9 @@
+import libraries
+
 #for delete operation
 #use syntax "delete(key_name)"
 
-def delete(key):
+def delete(d,key):
     if key not in d:
         print("error: given key does not exist in database. Please enter a valid key") #error message4
     else:

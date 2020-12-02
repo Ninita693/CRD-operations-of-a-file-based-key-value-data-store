@@ -1,8 +1,10 @@
+import libraries
+
 #for read operation
 
 #use syntax "read(key_name)"
 
-def read(key):
+def read(d,key):
     if key not in d:
         print("error: given key does not exist in database. Please enter a valid key") #error message4
     else:

@@ -1,10 +1,10 @@
-d={} #'d' is the dictionary in which we store data in key-value format
+import libraries
 
 #for create operation 
 
 #use syntax "create(key_name,name,phno,timeout_value)" timeout is optional you can continue by passing arguments without timeout
 
-def create(key,name,phno,timeout=0):
+def create(d,key,name,phno,timeout=0):
     if key not in d:
             if len(d)<(1024*1020*1024) and sys.getsizeof(name)+sys.getsizeof(phno)<=(16*1024*1024): #constraints for file size less than 1GB and sizeof (name + phno) value less than 16KB 
                 if timeout==0:

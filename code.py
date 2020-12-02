@@ -6,11 +6,11 @@ import time
 d={} #'d' is the dictionary in which we store data
 
 #for create operation 
-#use syntax "create(key_name,value,timeout_value)" timeout is optional you can continue by passing two arguments without timeout
+#use syntax "create(key_mailid,name.phno,timeout_value)" timeout is optional you can continue by passing  arguments without timeout
 
 def create(key,name,phno,timeout=0):
     if key not in d:
-            if len(d)<(1024*1020*1024) and sys.getsizeof(name)+sys.getsizeof(phno)<=(16*1024*1024): #constraints for file size less than 1GB and Jasonobject value less than 16KB 
+            if len(d)<(1024*1020*1024) and sys.getsizeof(name)+sys.getsizeof(phno)<=(16*1024*1024): #constraints for file size less than 1GB and sizeof(name + phno) value less than 16KB 
                 if timeout==0:
                     l=[name,phno,timeout]
                 else:
@@ -25,7 +25,7 @@ def create(key,name,phno,timeout=0):
       print("error: this key already exists") #error message1
         
 #for read operation
-#use syntax "read(key_name)"
+#use syntax "read(key_mailid)"
             
 def read(key):
     if key not in d:
@@ -34,7 +34,7 @@ def read(key):
         b=d[key]
         if b[2]!=0:
             if time.time()<b[2]: #comparing the present time with expiry time
-                stri="{"+"name"+":"+str(b[0])+","+"phno"+":"+str(b[1])+"}"#to return the value in the format of JasonObject i.e.,"key_name:value"
+                stri="{"+"name"+":"+str(b[0])+","+"phno"+":"+str(b[1])+"}"#to return the value in the format of JasonObject i.e.,"key_mailid:name,phno"
                 return stri
             else:
                 print("error: time-to-live of",key,"has expired") #error message5
@@ -43,7 +43,7 @@ def read(key):
             return stri
 
 #for delete operation
-#use syntax "delete(key_name)"
+#use syntax "delete(key_mailid)"
 
 def delete(key):
     if key not in d:

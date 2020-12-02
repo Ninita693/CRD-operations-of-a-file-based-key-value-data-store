@@ -1,3 +1,5 @@
+#for read operation
+
 #use syntax "read(key_name)"
 
 def read(key):

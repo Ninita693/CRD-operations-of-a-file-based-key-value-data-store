@@ -1,3 +1,5 @@
+#use syntax "read(key_name)"
+
 def read(key):
     if key not in d:
         print("error: given key does not exist in database. Please enter a valid key") #error message4
